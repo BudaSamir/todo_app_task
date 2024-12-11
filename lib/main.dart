@@ -8,6 +8,7 @@ import 'package:todo_app/app/modules/home/binding/home_binding.dart';
 import 'app/modules/home/views/home_page.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   await Get.putAsync(() => StorageService().init());
 
